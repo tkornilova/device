@@ -1,0 +1,128 @@
+.aboutus {
+  width: 100%;
+  margin: 0 auto 100px;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0 auto 80px;
+  }
+}
+
+.aboutus__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1222px;
+  margin: 0 auto;
+  padding: 0 25px 0 25px;
+
+  @media (max-width: $tablet-width-only) {
+    min-width: 674px;
+    padding: 0 50px 0 45px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 270px;
+    padding: 0 25px 0 25px;
+  }
+}
+
+.aboutus__img {
+  margin: 0 100px 0 0;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0 30px 0 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.container__title {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $main-blue;
+  margin: 0 0 13px 0;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+}
+
+.aboutus__container p {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $main-blue;
+  margin: 0 0 18px 0;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 134.4%;
+  }
+}
+
+.aboutus__container p:nth-of-type(2) {
+  margin: 0 0 40px 0;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0 0 14px 0;
+  }
+}
+
+.aboutus__container span {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.container__info.hidden {
+  display: none;
+}
+
+.aboutus__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  min-height: 45px;
+  color: $light-blue;
+  background-color: $white;
+  border-radius: 3px;
+  border: 1px solid $light-blue;
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+
+  @media (max-width: $tablet-width-only) {
+    width: 36%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 59%;
+    min-height: 35px;
+    padding: 8px;
+    margin: 0 0 0 8px;
+  }
+}
+
+.aboutus__button:hover,
+.aboutus__button:focus,
+.aboutus__button:active {
+  background-color: $light-blue;
+  border: 1px solid $white;
+  color: $light-gray;
+  transform: scale(1.1);
+  transition: 1s;
+}

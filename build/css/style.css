@@ -385,7 +385,7 @@ template {
 }
 
 @font-face {
-  font-family: "PT-Mono";
+  font-family: "PT Mono";
   src: url("../fonts/pt-mono-400.woff2") format("woff2"), url("../fonts/pt-mono-400.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -393,7 +393,7 @@ template {
 }
 
 @font-face {
-  font-family: "Roboto-Condensed";
+  font-family: "Roboto Condensed";
   src: url("../fonts/roboto-condensed-400.woff2") format("woff2"), url("../fonts/roboto-condensed-400.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -401,7 +401,7 @@ template {
 }
 
 @font-face {
-  font-family: "Roboto-Condensed";
+  font-family: "Roboto Condensed";
   src: url("../fonts/roboto-condensed-700.woff2") format("woff2"), url("../fonts/roboto-condensed-700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -548,7 +548,7 @@ a {
 }
 
 .header__link {
-  font-family: "PT-Mono";
+  font-family: "PT Mono";
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -629,7 +629,7 @@ a {
 
 .description__title {
   width: 95%;
-  font-family: "Roboto-Condensed";
+  font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -642,7 +642,7 @@ a {
 
 .description__caption {
   width: 59%;
-  font-family: "PT-Mono";
+  font-family: "PT Mono";
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
@@ -667,7 +667,7 @@ a {
   background-color: #00b3ff;
   border-radius: 3px;
   border: none;
-  font-family: "Roboto-Condensed";
+  font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -707,7 +707,7 @@ a {
 
 .advantages {
   width: 100%;
-  margin: 0 auto 120px;
+  margin: 0 auto 94px;
 }
 
 .advantages__list {
@@ -782,7 +782,7 @@ a {
 }
 
 .advantages__title {
-  font-family: "Roboto-Condensed";
+  font-family: "Roboto Condensed";
   font-weight: 400;
   font-size: 24px;
   line-height: 140%;
@@ -799,7 +799,7 @@ a {
 .advantages__caption {
   display: block;
   min-height: 120px;
-  font-family: "PT-Mono";
+  font-family: "PT Mono";
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
@@ -811,6 +811,104 @@ a {
 .advantages__item:focus .advantages__caption,
 .advantages__item:active .advantages__caption {
   color: #f2f5f6;
+}
+
+.aboutus {
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
+.aboutus__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  max-width: 1222px;
+  margin: 0 auto;
+  padding: 0 25px 0 25px;
+}
+
+.aboutus__img {
+  margin: 0 100px 0 0;
+}
+
+.container__title {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #041827;
+  margin: 0 0 13px 0;
+}
+
+.aboutus__container p {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #041827;
+  margin: 0 0 18px 0;
+}
+
+.aboutus__container p:nth-of-type(2) {
+  margin: 0 0 40px 0;
+}
+
+.container__info.hidden {
+  display: none;
+}
+
+.aboutus__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  min-height: 45px;
+  color: #00b3ff;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #00b3ff;
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.aboutus__button:hover,
+.aboutus__button:focus,
+.aboutus__button:active {
+  background-color: #00b3ff;
+  border: 1px solid white;
+  color: #f2f5f6;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 @media (min-width: 1024px) {
@@ -845,7 +943,7 @@ a {
     background-color: #041827;
     border: 1px solid #f2f5f6;
     border-radius: 3px;
-    font-family: "Roboto-Condensed";
+    font-family: "Roboto Condensed";
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -936,7 +1034,7 @@ a {
   }
 
   .advantages {
-    margin: 0 auto 80px;
+    margin: 0 auto 50px;
   }
 
   .advantages__list {
@@ -959,6 +1057,27 @@ a {
 
   .advantages__caption {
     min-height: 160px;
+  }
+
+  .aboutus {
+    margin: 0 auto 80px;
+  }
+
+  .aboutus__wrapper {
+    min-width: 674px;
+    padding: 0 50px 0 45px;
+  }
+
+  .aboutus__img {
+    margin: 0 30px 0 0;
+  }
+
+  .aboutus__container p:nth-of-type(2) {
+    margin: 0 0 14px 0;
+  }
+
+  .aboutus__button {
+    width: 36%;
   }
 }
 
@@ -1028,7 +1147,7 @@ a {
   }
 
   .advantages {
-    margin: 0 auto 50px;
+    margin: 0 auto 34px;
   }
 
   .advantages__list {
@@ -1059,6 +1178,36 @@ a {
   .advantages__caption {
     font-size: 14px;
     min-height: 140px;
+  }
+
+  .aboutus__wrapper {
+    min-width: 270px;
+    padding: 0 25px 0 25px;
+  }
+
+  .aboutus__img {
+    display: none;
+  }
+
+  .container__title {
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+
+  .aboutus__container p {
+    font-size: 14px;
+    line-height: 134.4%;
+  }
+
+  .aboutus__container span {
+    display: none;
+  }
+
+  .aboutus__button {
+    width: 59%;
+    min-height: 35px;
+    padding: 8px;
+    margin: 0 0 0 8px;
   }
 }
 
