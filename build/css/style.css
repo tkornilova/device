@@ -548,7 +548,7 @@ a {
 }
 
 .header__link {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -629,7 +629,7 @@ a {
 
 .description__title {
   width: 95%;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -642,7 +642,7 @@ a {
 
 .description__caption {
   width: 59%;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
@@ -667,7 +667,7 @@ a {
   background-color: #00b3ff;
   border-radius: 3px;
   border: none;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -782,7 +782,7 @@ a {
 }
 
 .advantages__title {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 140%;
@@ -799,7 +799,7 @@ a {
 .advantages__caption {
   display: block;
   min-height: 120px;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
@@ -842,7 +842,7 @@ a {
 }
 
 .container__title {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
@@ -851,7 +851,7 @@ a {
 }
 
 .aboutus__container p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -883,7 +883,7 @@ a {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #00b3ff;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -943,7 +943,7 @@ a {
     background-color: #041827;
     border: 1px solid #f2f5f6;
     border-radius: 3px;
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
