@@ -26,8 +26,9 @@
     padding: 20px 50px 25px 50px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $mobile-width-only) {
     max-width: 767px;
+    min-width: 320px;
     min-height: 70px;
     padding: 15px 15px 16px 26px;
   }
@@ -88,7 +89,7 @@
 }
 
 .header__link {
-  font-family: 'PT Mono';
+  font-family: "PT-Mono";
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -132,7 +133,7 @@
     align-items: center;
     justify-content: center;
     width: 160px;
-    height: 40px;
+    min-height: 40px;
     background-color: $main-blue;
     border: 1px solid $light-gray;
     border-radius: 3px;
@@ -145,6 +146,9 @@
     color: $light-gray;
     cursor: pointer;
     margin: 5px 0 0 0;
+    padding: 10px;
+    user-select: none;
+    box-sizing: border-box;
   }
 
   @media (max-width: $tablet-width-only) {
