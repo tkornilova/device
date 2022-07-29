@@ -4,61 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/pt-mono-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="img/favicons/favicon.ico">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+
+      <header class="header">
+        <div class="header__wrapper">
+          <a class="header__logo logo" href="#" aria-label="Переход на главную страницу" tabindex="-1">
+            <picture class="logo__wrapper">
+              <source class="logo__img" media="(max-width: 767px)" srcset="img/logo-mobile-1x.png 1x, img/logo-mobile-2x.png 2x">
+              <img class="logo__img" src="img/logo-desktop-1x.png" srcset="img/logo-desktop-1x.png 2x" alt="Логотип" width="215" height="55">
+            </picture>
+          </a>
+          <ul class="header__list">
+            <li class="header__item">
+              <svg width="20" height="20" role="img">
+                <use xlink:href="img/sprite.svg#email"></use>
+              </svg>
+              <a href="mailto: info@sd.ru" aria-label="Напишите нам">info@sd.ru</a>
+            </li>
+            <li class="header__item">
+              <svg width="20" height="20" role="img">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+              <a href="tel:+74950005252" aria-label="Позвоните нам">+7 (495) 000 52 52</a>
+            </li>
+          </ul>
+          <button class="header__button">Заказать звонок</button>
+        </div>
       </header>
+
       <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section>
+
+
       </main>
+
       <footer>
-        <div class="container"></div>
+
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
   </body>
 </html>
