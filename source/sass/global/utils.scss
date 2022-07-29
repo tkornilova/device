@@ -25,6 +25,35 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  min-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  color: $main-blue;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "PT Mono", "Arial", sans-serif;
+  background-color: $white;
+  position: relative;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
 li {
   list-style: none;
 }
