@@ -81,47 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/vendor.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./js/main.js":
-/*!********************!*\
-  !*** ./js/main.js ***!
-  \********************/
+/***/ "./js/vendor.js":
+/*!**********************!*\
+  !*** ./js/vendor.js ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var buttonMore = document.querySelector('.aboutus__button');
-var hiddenInfos = document.querySelectorAll('.container__info--hidden');
-var hiddenInfoSpan = document.querySelector('.container__info span');
-buttonMore.addEventListener('click', function () {
-  hiddenInfos.forEach(function (value) {
-    value.classList.toggle('hidden');
-  });
-
-  if (buttonMore.textContent === 'Свернуть') {
-    hiddenInfoSpan.style.display = 'none';
-  } else {
-    hiddenInfoSpan.style.display = 'initial';
-  }
-
-  if (buttonMore.textContent === 'Подробнее') {
-    buttonMore.innerHTML = 'Свернуть';
-  } else {
-    buttonMore.innerHTML = 'Подробнее';
-  }
-});
-window.addEventListener('resize', function () {
-  if (window.screen.width > 767) {
-    hiddenInfoSpan.style.display = 'initial';
-  } else if (window.screen.width < 767 && buttonMore.textContent === 'Подробнее') {
-    hiddenInfoSpan.style.display = 'none';
-  }
-});
+// Swiper 7.4.1
+// import './vendor/swiper';
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.min.js.map
+//# sourceMappingURL=vendor.min.js.map

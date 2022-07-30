@@ -94,14 +94,12 @@
 /***/ (function(module, exports) {
 
 var buttonMore = document.querySelector('.aboutus__button');
-var hiddenInfos = document.querySelectorAll('.container__info--hidden');
+var hiddenInfo = document.querySelector('.container__info--hidden');
 var hiddenInfoSpan = document.querySelector('.container__info span');
 buttonMore.addEventListener('click', function () {
-  hiddenInfos.forEach(function (value) {
-    value.classList.toggle('hidden');
-  });
+  hiddenInfo.classList.toggle('hidden');
 
-  if (buttonMore.textContent === 'Свернуть') {
+  if (hiddenInfoSpan.style.display === 'none') {
     hiddenInfoSpan.style.display = 'none';
   } else {
     hiddenInfoSpan.style.display = 'initial';
@@ -114,10 +112,8 @@ buttonMore.addEventListener('click', function () {
   }
 });
 window.addEventListener('resize', function () {
-  if (window.screen.width > 767) {
+  if (window.screen.width < 767 && buttonMore.innerHTML === 'Свернуть') {
     hiddenInfoSpan.style.display = 'initial';
-  } else if (window.screen.width < 767 && buttonMore.textContent === 'Подробнее') {
-    hiddenInfoSpan.style.display = 'none';
   }
 });
 
