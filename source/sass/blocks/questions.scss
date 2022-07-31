@@ -1,7 +1,7 @@
 .questions {
   width: 100%;
   min-width: 320px;
-  margin: 0 auto 100px;
+  margin: 0 auto;
   background-color: $light-blue;
   background-image: url("../../img/questions-bg-1x.png");
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   background-position: 0 -579px;
 
   @media (max-width: $tablet-width-only) {
-    margin: 0 auto 80px;
+    margin: 0 auto;
     background-image: none;
   }
 }
@@ -35,7 +35,7 @@
   }
 }
 
-.questions__picture {
+.questions__wrapper img {
   margin: 82px 40px 0 0;
 
   @media (max-width: $tablet-width-only) {
@@ -215,10 +215,10 @@
   flex-direction: row;
   align-items: center;
   width: auto;
-  padding: 12px 0 0 0px;
+  padding: 12px 0 0 0;
 
   @media (max-width: $tablet-width-only) {
-    padding: 2px 0 0 0px;
+    padding: 2px 0 0 0;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -272,4 +272,11 @@
   font-size: 14px;
   line-height: 16px;
   color: $white;
+}
+
+.form__checkbox-input:hover .form__checkbox,
+.form__checkbox-input:focus .form__checkbox,
+.form__checkbox-input:active .form__checkbox {
+  transform: scale(1.1);
+  transition: 1s;
 }
