@@ -27,7 +27,7 @@
   }
 }
 
-.aboutus__img {
+.aboutus img {
   margin: 0 100px 0 0;
 
   @media (max-width: $tablet-width-only) {
@@ -39,7 +39,7 @@
   }
 }
 
-.container__title {
+.container h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 36px;

@@ -62,7 +62,7 @@
   }
 }
 
-.description__title {
+.description__wrapper h2 {
   width: 95%;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
@@ -89,7 +89,7 @@
   }
 }
 
-.description__caption {
+.description__wrapper p {
   width: 59%;
   font-family: "PT Mono", sans-serif;
   font-weight: 400;
@@ -155,7 +155,7 @@
   transition: 1s;
 }
 
-.description__button-desktop {
+.description__button span:first-child {
   display: flex;
 
   @media (max-width: $mobile-width-only) {
@@ -163,7 +163,7 @@
   }
 }
 
-.description__button-mobile {
+.description__button span:last-child {
   display: none;
 
   @media (max-width: $mobile-width-only) {

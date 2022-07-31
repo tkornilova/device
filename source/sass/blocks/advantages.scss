@@ -97,7 +97,7 @@
   fill: $light-gray;
 }
 
-.advantages__title {
+.advantages__item h3 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -114,13 +114,13 @@
   }
 }
 
-.advantages__item:hover .advantages__title,
-.advantages__item:focus .advantages__title,
-.advantages__item:active .advantages__title {
+.advantages__item:hover h3,
+.advantages__item:focus h3,
+.advantages__item:active h3 {
   color: $light-gray;
 }
 
-.advantages__caption {
+.advantages__item p {
   display: block;
   min-height: 120px;
   font-family: "PT Mono", sans-serif;
@@ -140,8 +140,8 @@
   }
 }
 
-.advantages__item:hover .advantages__caption,
-.advantages__item:focus .advantages__caption,
-.advantages__item:active .advantages__caption {
+.advantages__item:hover p,
+.advantages__item:focus p,
+.advantages__item:active p {
   color: $light-gray;
 }
