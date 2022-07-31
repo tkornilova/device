@@ -2057,6 +2057,19 @@ a {
     right: 25px;
   }
 
+  .wrapper-no-js .footer__title {
+    border-bottom: none;
+  }
+
+  .wrapper-no-js .footer__title::after {
+    content: url("../../img/icons/icon-minus.png");
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 19px;
+    right: 25px;
+  }
+
   .footer__section2 h2 {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -2104,6 +2117,19 @@ a {
     box-sizing: border-box;
     border-bottom: 1px solid white;
     display: none;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+  }
+
+  .wrapper-no-js .footer__site-sections {
+    padding: 0 25px 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;

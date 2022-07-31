@@ -1,3 +1,11 @@
+// Check if JS is working
+
+const wrapper = document.querySelector('.wrapper');
+
+if (wrapper.classList.contains('wrapper-no-js')) {
+  wrapper.classList.remove('wrapper-no-js');
+}
+
 // Additional descripton
 
 const buttonMore = document.querySelector('.aboutus__button');

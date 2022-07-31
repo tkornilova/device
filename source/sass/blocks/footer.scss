@@ -71,6 +71,22 @@
   }
 }
 
+.wrapper-no-js .footer__title {
+  @media (max-width: $mobile-width-only) {
+    border-bottom: none;
+  }
+}
+
+.wrapper-no-js .footer__title::after {
+  @media (max-width: $mobile-width-only) {
+    content: url("../../img/icons/icon-minus.png");
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 19px;
+    right: 25px;
+  }
+}
 
 .footer__section2 h2 {
   @media (max-width: $mobile-width-only) {
@@ -204,6 +220,16 @@
     box-sizing: border-box;
     border-bottom: 1px solid $white;
     display: none;
+    transition: 1s;
+  }
+}
+
+.wrapper-no-js .footer__site-sections {
+  @media (max-width: $mobile-width-only) {
+    padding: 0 25px 6px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $white;
+    display: flex;
     transition: 1s;
   }
 }
