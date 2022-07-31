@@ -9,15 +9,14 @@ buttonMore.addEventListener('click', () => {
     value.classList.toggle('hidden');
   });
 
-  if (buttonMore.textContent === 'Свернуть') {
-    hiddenInfoSpan.style.display = 'none';
-  } else {
-    hiddenInfoSpan.style.display = 'initial';
-  }
-
   if (buttonMore.textContent === 'Подробнее') {
+    hiddenInfoSpan.style.display = 'initial';
     buttonMore.innerHTML = 'Свернуть';
+  } else if (buttonMore.textContent === 'Свернуть' && window.screen.width > 769) {
+    hiddenInfoSpan.style.display = 'initial';
+    buttonMore.innerHTML = 'Подробнее';
   } else {
+    hiddenInfoSpan.style.display = 'none';
     buttonMore.innerHTML = 'Подробнее';
   }
 });

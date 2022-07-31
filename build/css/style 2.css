@@ -1255,7 +1255,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   width: auto;
-  padding: 12px 0 0 0;
+  padding: 12px 0 0 0px;
 }
 
 .form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
@@ -1324,6 +1324,7 @@ a {
   justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  border: 1px solid white;
   padding: 50px 50px 50px 20px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -1763,7 +1764,7 @@ a {
   }
 
   .form__checkbox {
-    padding: 2px 0 0 0;
+    padding: 2px 0 0 0px;
   }
 
   .form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
