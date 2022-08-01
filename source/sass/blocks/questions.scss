@@ -191,6 +191,7 @@
   border-radius: 3px;
   border: none;
   margin: 0 9% 0 0;
+  cursor: pointer;
 
   @media (max-width: $tablet-width-only) {
     width: 49%;
@@ -272,6 +273,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $white;
+  cursor: pointer;
 }
 
 .form__checkbox-input:hover .form__checkbox,

@@ -1,8 +1,13 @@
 const wrapper = document.querySelector('.wrapper');
+const body = document.querySelector('body');
 
 const headerButton = document.querySelector('.header__button');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
+const form = document.querySelector('.form');
+const inputName = document.querySelector('.form__name');
+const inputPhone = document.querySelector('.form__phone');
+const buttonSubmit = document.querySelector('.form__button');
 
 const buttonMore = document.querySelector('.aboutus__button');
 const hiddenInfos = document.querySelectorAll('.container__info--hidden');
@@ -16,11 +21,18 @@ const footerTitle3 = document.querySelector('.footer__title3');
 if (wrapper.classList.contains('wrapper-no-js')) {
   wrapper.classList.remove('wrapper-no-js');
   footerTitle2.classList.add('title-closed');
-  footerTitle2.nextElementSibling.style.display = 'none';
-  footerTitle3.nextElementSibling.style.display = 'none';
   footerTitle3.classList.add('title-closed');
-  modal.style.display = 'flex';
   modal.style.top = '-1000px';
+
+  if (window.screen.width > 769) {
+    footerTitle2.nextElementSibling.style.display = 'flex';
+    footerTitle3.nextElementSibling.style.display = 'flex';
+    modal.style.display = 'flex';
+  } else {
+    footerTitle2.nextElementSibling.style.display = 'none';
+    footerTitle3.nextElementSibling.style.display = 'none';
+    modal.style.display = 'none';
+  }
 }
 
 // Open/close modal
@@ -29,24 +41,43 @@ headerButton.addEventListener('click', (evt) => {
   evt.preventDefault();
   modal.style.transform = 'translateY(1146px)';
   wrapper.classList.add('wrapper__overlay');
+  body.style.overflow = 'hidden';
+  inputName.focus({preventScroll: true});
 });
 
 modalClose.addEventListener('click', () => {
   modal.style.transform = 'none';
   wrapper.classList.remove('wrapper__overlay');
+  body.style.overflow = 'auto';
 });
 
 window.addEventListener('click', (evt) => {
   if (evt.target.classList.contains('wrapper__overlay')) {
     modal.style.transform = 'none';
     wrapper.classList.remove('wrapper__overlay');
+    body.style.overflow = 'auto';
   }
 });
 
 window.addEventListener('resize', () => {
   if (window.screen.width < 1024) {
     modal.style.transform = 'none';
+    modal.style.display = 'none';
     wrapper.classList.remove('wrapper__overlay');
+    body.style.overflow = 'auto';
+  } else {
+    modal.style.display = 'flex';
+  }
+});
+
+// Submit form
+
+buttonSubmit.addEventListener('submit', () => {
+  if (inputName.value !== '' && inputPhone.value !== '') {
+    localStorage.setItem('name', inputName.value);
+    localStorage.setItem('phone', inputPhone.value);
+  } else {
+    form.reportValidity();
   }
 });
 
