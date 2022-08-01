@@ -14,7 +14,6 @@
   right: 0;
   transition: 1s;
   z-index: 100;
-  box-sizing: border-box;
 
   @media (max-width: $tablet-width-only) {
     display: none;
@@ -41,7 +40,7 @@
 
 .modal__close:hover,
 .modal__close:focus,
-.modal__close:active  {
+.modal__close:active {
   border: 1px solid $white;
   transition: 1s;
 }
