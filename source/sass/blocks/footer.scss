@@ -53,7 +53,7 @@
 
 .footer__title::after {
   @media (max-width: $mobile-width-only) {
-    content: url("../../img/icons/icon-minus.png");
+    content: url("../img/icons/icon-minus.png");
     width: 15px;
     height: 1px;
     position: absolute;
@@ -64,7 +64,7 @@
 
 .footer__title.title-closed::after {
   @media (max-width: $mobile-width-only) {
-    content: url("../../img/icons/icon-plus.png");
+    content: url("../img/icons/icon-plus.png");
     width: 15px;
     height: 15px;
     position: absolute;
@@ -81,7 +81,7 @@
 
 .wrapper-no-js .footer__title::after {
   @media (max-width: $mobile-width-only) {
-    content: url("../../img/icons/icon-minus.png");
+    content: url("../img/icons/icon-minus.png");
     width: 15px;
     height: 1px;
     position: absolute;

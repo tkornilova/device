@@ -466,7 +466,7 @@ body {
 }
 
 .wrapper__overlay::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: rgba(3, 16, 27, 0.7);
@@ -1005,7 +1005,7 @@ a {
 }
 
 .goods__item::after {
-  content: url("../../img/icons/icon-next.svg");
+  content: url("../img/icons/icon-next.svg");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,7 +1050,7 @@ a {
   min-width: 320px;
   margin: 0 auto;
   background-color: #00b3ff;
-  background-image: url("../../img/questions-bg-1x.png");
+  background-image: url("../img/questions-bg-1x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -579px;
@@ -1154,6 +1154,10 @@ a {
   margin: 0 0 20px 0;
 }
 
+.form__name {
+  margin: 0 34px 20px 0;
+}
+
 .form__name::-webkit-input-placeholder,
 .form__phone::-webkit-input-placeholder,
 .form__question::-webkit-input-placeholder {
@@ -1204,10 +1208,6 @@ a {
   color: white;
 }
 
-.form__name {
-  margin: 0 34px 20px 0;
-}
-
 .form__question {
   width: 100%;
   min-height: 155px;
@@ -1220,7 +1220,7 @@ a {
   margin: 0 0 35px 0;
 }
 
-.form__button {
+.questions .form__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1273,7 +1273,7 @@ a {
   padding: 12px 0 0 0;
 }
 
-.form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
+.form__checkbox input[type="checkbox"] ~ .form__checkbox-mark {
   width: 27px;
   height: 15px;
   background-image: url("../img/icons/icon-empty.svg");
@@ -1284,7 +1284,7 @@ a {
   vertical-align: baseline;
 }
 
-.form__checkbox-input[type="checkbox"]:checked ~ .form__checkbox-mark {
+.form__checkbox input[type="checkbox"]:checked ~ .form__checkbox-mark {
   width: 27px;
   height: 15px;
   background-image: url("../img/icons/icon-checked.svg");
@@ -1305,9 +1305,9 @@ a {
   cursor: pointer;
 }
 
-.form__checkbox-input:hover .form__checkbox,
-.form__checkbox-input:focus .form__checkbox,
-.form__checkbox-input:active .form__checkbox {
+.form__checkbox input:hover .form__checkbox,
+.form__checkbox input:focus .form__checkbox,
+.form__checkbox input:active .form__checkbox {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -1555,7 +1555,6 @@ a {
   -o-transition: 1s;
   transition: 1s;
   z-index: 100;
-  box-sizing: border-box;
 }
 
 .modal-index {
@@ -1619,13 +1618,16 @@ a {
 
 .modal textarea {
   width: 99%;
-  margin: 0 0 19px 0;
+  margin: 0 0 16px 0;
 }
 
-.modal__button {
+.modal .form__button {
   width: 99%;
+  min-height: 42px;
+  color: white;
+  border: none;
   background-color: #041827;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   cursor: pointer;
 }
 
@@ -1883,7 +1885,7 @@ a {
     padding: 30px 15px 16px;
   }
 
-  .form__button {
+  .questions .form__button {
     width: 49%;
     margin: 0 84px 0 0;
   }
@@ -1892,11 +1894,11 @@ a {
     padding: 2px 0 0 0;
   }
 
-  .form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
+  .form__checkbox input[type="checkbox"] ~ .form__checkbox-mark {
     margin-right: 4px;
   }
 
-  .form__checkbox-input[type="checkbox"]:checked ~ .form__checkbox-mark {
+  .form__checkbox input[type="checkbox"]:checked ~ .form__checkbox-mark {
     margin-right: 4px;
   }
 
@@ -2134,7 +2136,7 @@ a {
     margin: 0 0 30px 0;
   }
 
-  .form__button {
+  .questions .form__button {
     width: 100%;
     margin: 0 0 25px 0;
   }
@@ -2144,11 +2146,11 @@ a {
     padding: 0;
   }
 
-  .form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
+  .form__checkbox input[type="checkbox"] ~ .form__checkbox-mark {
     margin-right: 9px;
   }
 
-  .form__checkbox-input[type="checkbox"]:checked ~ .form__checkbox-mark {
+  .form__checkbox input[type="checkbox"]:checked ~ .form__checkbox-mark {
     margin-right: 9px;
   }
 
@@ -2172,7 +2174,7 @@ a {
   }
 
   .footer__title::after {
-    content: url("../../img/icons/icon-minus.png");
+    content: url("../img/icons/icon-minus.png");
     width: 15px;
     height: 1px;
     position: absolute;
@@ -2181,7 +2183,7 @@ a {
   }
 
   .footer__title.title-closed::after {
-    content: url("../../img/icons/icon-plus.png");
+    content: url("../img/icons/icon-plus.png");
     width: 15px;
     height: 15px;
     position: absolute;
@@ -2194,7 +2196,7 @@ a {
   }
 
   .wrapper-no-js .footer__title::after {
-    content: url("../../img/icons/icon-minus.png");
+    content: url("../img/icons/icon-minus.png");
     width: 15px;
     height: 1px;
     position: absolute;

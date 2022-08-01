@@ -28,7 +28,6 @@
   top: 146px;
 }
 
-
 .modal__close {
   background-color: transparent;
   border: none;
@@ -79,13 +78,16 @@
 
 .modal textarea {
   width: 99%;
-  margin: 0 0 19px 0;
+  margin: 0 0 16px 0;
 }
 
-.modal__button {
+.modal .form__button {
   width: 99%;
+  min-height: 42px;
+  color: $white;
+  border: none;
   background-color: $main-blue;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   cursor: pointer;
 }
 
