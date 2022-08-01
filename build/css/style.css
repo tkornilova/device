@@ -1141,17 +1141,23 @@ a {
   align-items: center;
 }
 
-.form__name,
-.form__phone {
+.questions .form__name,
+.questions .form__phone {
   width: 47%;
   height: 50px;
+  margin: 0 0 20px 0;
+}
+
+.form__name input,
+.form__phone input {
+  width: 100%;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
   padding: 10px 16px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
 .form__name {
@@ -1211,13 +1217,18 @@ a {
 .form__question {
   width: 100%;
   min-height: 155px;
+  margin: 0 0 28px 0;
+}
+
+.form__question textarea {
+  width: 100%;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
   padding: 20px 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0 0 35px 0;
+  margin: 0;
 }
 
 .questions .form__button {
@@ -1544,7 +1555,7 @@ a {
   -ms-flex-pack: start;
   justify-content: flex-start;
   background-color: #00b3ff;
-  padding: 6px 33px 46px 38px;
+  padding: 6px 33px 46px 35px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1607,7 +1618,9 @@ a {
 }
 
 .modal input {
-  width: 99%;
+  width: 97%;
+  height: 45px;
+  margin: 0 0 24px 0;
 }
 
 .modal input:hover,
@@ -1617,12 +1630,12 @@ a {
 }
 
 .modal textarea {
-  width: 99%;
+  width: 97%;
   margin: 0 0 16px 0;
 }
 
 .modal .form__button {
-  width: 99%;
+  width: 97%;
   min-height: 42px;
   color: white;
   border: none;
@@ -1632,7 +1645,7 @@ a {
 }
 
 .modal label {
-  width: 99%;
+  width: 97%;
   padding: 0;
   margin: 0 0 0 9px;
   cursor: pointer;
@@ -1876,12 +1889,12 @@ a {
     margin: 0 0 24px 0;
   }
 
-  .form__name,
-  .form__phone {
+  .questions .form__name,
+  .questions .form__phone {
     width: 48%;
   }
 
-  .form__question {
+  .form__question textarea {
     padding: 30px 15px 16px;
   }
 
@@ -2121,8 +2134,8 @@ a {
     flex-direction: column;
   }
 
-  .form__name,
-  .form__phone {
+  .questions .form__name,
+  .questions .form__phone {
     width: 100%;
   }
 
@@ -2131,9 +2144,11 @@ a {
   }
 
   .form__question {
-    min-height: 181px;
-    padding: 24px 15px 16px;
     margin: 0 0 30px 0;
+  }
+
+  .form__question textarea {
+    padding: 24px 15px 16px;
   }
 
   .questions .form__button {

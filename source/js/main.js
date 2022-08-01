@@ -43,6 +43,7 @@ headerButton.addEventListener('click', (evt) => {
   wrapper.classList.add('wrapper__overlay');
   body.style.overflow = 'hidden';
   inputName.focus({preventScroll: true});
+  window.scroll(0, 0);
 });
 
 modalClose.addEventListener('click', () => {

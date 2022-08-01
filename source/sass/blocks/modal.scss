@@ -6,7 +6,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   background-color: $light-blue;
-  padding: 6px 33px 46px 38px;
+  padding: 6px 33px 46px 35px;
   margin: 0 auto;
   box-sizing: border-box;
   position: absolute;
@@ -67,7 +67,9 @@
 }
 
 .modal input {
-  width: 99%;
+  width: 97%;
+  height: 45px;
+  margin: 0 0 24px 0;
 }
 
 .modal input:hover,
@@ -77,12 +79,12 @@
 }
 
 .modal textarea {
-  width: 99%;
+  width: 97%;
   margin: 0 0 16px 0;
 }
 
 .modal .form__button {
-  width: 99%;
+  width: 97%;
   min-height: 42px;
   color: $white;
   border: none;
@@ -92,7 +94,7 @@
 }
 
 .modal label {
-  width: 99%;
+  width: 97%;
   padding: 0;
   margin: 0 0 0 9px;
   cursor: pointer;
