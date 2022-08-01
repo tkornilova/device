@@ -93,49 +93,17 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// Check if JS is working
 var wrapper = document.querySelector('.wrapper');
-var headerButton = document.querySelector('.header__button');
-var modal = document.querySelector('.modal');
-var modalClose = document.querySelector('.modal__close');
-var buttonMore = document.querySelector('.aboutus__button');
-var hiddenInfos = document.querySelectorAll('.container__info--hidden');
-var hiddenInfoSpan = document.querySelector('.container__info span');
-var footerTitle2 = document.querySelector('.footer__title2');
-var footerTitle3 = document.querySelector('.footer__title3'); // Check if JS is working
 
 if (wrapper.classList.contains('wrapper-no-js')) {
   wrapper.classList.remove('wrapper-no-js');
-  footerTitle2.classList.add('title-closed');
-  footerTitle2.nextElementSibling.style.display = 'none';
-  footerTitle3.nextElementSibling.style.display = 'none';
-  footerTitle3.classList.add('title-closed');
-  modal.style.display = 'flex';
-  modal.style.top = '-1000px';
-} // Open/close modal
+} // Show additional descripton
 
 
-headerButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  modal.style.transform = 'translateY(1146px)';
-  wrapper.classList.add('wrapper__overlay');
-});
-modalClose.addEventListener('click', function () {
-  modal.style.transform = 'none';
-  wrapper.classList.remove('wrapper__overlay');
-});
-window.addEventListener('click', function (evt) {
-  if (evt.target.classList.contains('wrapper__overlay')) {
-    modal.style.transform = 'none';
-    wrapper.classList.remove('wrapper__overlay');
-  }
-});
-window.addEventListener('resize', function () {
-  if (window.screen.width < 1024) {
-    modal.style.transform = 'none';
-    wrapper.classList.remove('wrapper__overlay');
-  }
-}); // Show additional descripton
-
+var buttonMore = document.querySelector('.aboutus__button');
+var hiddenInfos = document.querySelectorAll('.container__info--hidden');
+var hiddenInfoSpan = document.querySelector('.container__info span');
 buttonMore.addEventListener('click', function () {
   hiddenInfos.forEach(function (value) {
     value.classList.toggle('hidden');
@@ -159,6 +127,9 @@ window.addEventListener('resize', function () {
     hiddenInfoSpan.style.display = 'none';
   }
 }); // Footer accordion
+
+var footerTitle2 = document.querySelector('.footer__title2');
+var footerTitle3 = document.querySelector('.footer__title3');
 
 var openDescription = function openDescription(el) {
   el.classList.remove('title-closed');

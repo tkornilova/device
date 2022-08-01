@@ -1255,7 +1255,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   width: auto;
-  padding: 12px 0 0 0px;
+  padding: 12px 0 0 0;
 }
 
 .form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
@@ -1324,7 +1324,6 @@ a {
   justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  border: 1px solid white;
   padding: 50px 50px 50px 20px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -1764,7 +1763,7 @@ a {
   }
 
   .form__checkbox {
-    padding: 2px 0 0 0px;
+    padding: 2px 0 0 0;
   }
 
   .form__checkbox-input[type="checkbox"] ~ .form__checkbox-mark {
@@ -2038,9 +2037,11 @@ a {
     box-sizing: border-box;
     margin: 0;
     position: relative;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
   }
 
-  .footer__wrapper h2::after {
+  .footer__title::after {
     content: url("../../img/icons/icon-minus.png");
     width: 15px;
     height: 1px;
@@ -2058,13 +2059,17 @@ a {
     right: 25px;
   }
 
-  .footer__section2 h2 {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+  .wrapper-no-js .footer__title {
+    border-bottom: none;
   }
 
-  .footer__section3 h2 {
-    border-top: 1px solid white;
+  .wrapper-no-js .footer__title::after {
+    content: url("../../img/icons/icon-minus.png");
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 19px;
+    right: 25px;
   }
 
   .footer__site-sections p,
@@ -2110,6 +2115,19 @@ a {
     transition: 1s;
   }
 
+  .wrapper-no-js .footer__site-sections {
+    padding: 0 25px 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+  }
+
   .footer__section3 {
     width: 100%;
     padding: 0;
@@ -2123,6 +2141,7 @@ a {
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
+    display: none;
   }
 }
 

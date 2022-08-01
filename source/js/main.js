@@ -1,16 +1,56 @@
-// Check if JS is working
-
 const wrapper = document.querySelector('.wrapper');
 
-if (wrapper.classList.contains('wrapper-no-js')) {
-  wrapper.classList.remove('wrapper-no-js');
-}
-
-// Show additional descripton
+const headerButton = document.querySelector('.header__button');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
 
 const buttonMore = document.querySelector('.aboutus__button');
 const hiddenInfos = document.querySelectorAll('.container__info--hidden');
 const hiddenInfoSpan = document.querySelector('.container__info span');
+
+const footerTitle2 = document.querySelector('.footer__title2');
+const footerTitle3 = document.querySelector('.footer__title3');
+
+// Check if JS is working
+
+if (wrapper.classList.contains('wrapper-no-js')) {
+  wrapper.classList.remove('wrapper-no-js');
+  footerTitle2.classList.add('title-closed');
+  footerTitle2.nextElementSibling.style.display = 'none';
+  footerTitle3.nextElementSibling.style.display = 'none';
+  footerTitle3.classList.add('title-closed');
+  modal.style.display = 'flex';
+  modal.style.top = '-1000px';
+}
+
+// Open/close modal
+
+headerButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modal.style.transform = 'translateY(1146px)';
+  wrapper.classList.add('wrapper__overlay');
+});
+
+modalClose.addEventListener('click', () => {
+  modal.style.transform = 'none';
+  wrapper.classList.remove('wrapper__overlay');
+});
+
+window.addEventListener('click', (evt) => {
+  if (evt.target.classList.contains('wrapper__overlay')) {
+    modal.style.transform = 'none';
+    wrapper.classList.remove('wrapper__overlay');
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.screen.width < 1024) {
+    modal.style.transform = 'none';
+    wrapper.classList.remove('wrapper__overlay');
+  }
+});
+
+// Show additional descripton
 
 buttonMore.addEventListener('click', () => {
   hiddenInfos.forEach((value) => {
@@ -38,9 +78,6 @@ window.addEventListener('resize', () => {
 });
 
 // Footer accordion
-
-const footerTitle2 = document.querySelector('.footer__title2');
-const footerTitle3 = document.querySelector('.footer__title3');
 
 const openDescription = (el) => {
   el.classList.remove('title-closed');
@@ -105,7 +142,7 @@ footerTitle3.addEventListener('keypress', (evt) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.screen.width > 770) {
+  if (window.screen.width > 769) {
     footerTitle2.style.borderBottom = 'none';
     footerTitle3.style.borderBottom = 'none';
     footerTitle2.nextElementSibling.style.display = 'flex';
