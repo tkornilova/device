@@ -5,8 +5,8 @@ const headerButton = document.querySelector('.header__button');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const form = document.querySelector('.form');
-const inputName = document.querySelector('.form__name');
-const inputPhone = document.querySelector('.form__phone');
+const inputName = document.querySelectorAll('.form__name input');
+const inputPhone = document.querySelectorAll('.form__phone input');
 const buttonSubmit = document.querySelector('.form__button');
 
 const buttonMore = document.querySelector('.aboutus__button');
@@ -24,7 +24,7 @@ if (wrapper.classList.contains('wrapper-no-js')) {
   footerTitle3.classList.add('title-closed');
   modal.style.top = '-1000px';
 
-  if (window.screen.width > 769) {
+  if (window.screen.width > 767) {
     footerTitle2.nextElementSibling.style.display = 'flex';
     footerTitle3.nextElementSibling.style.display = 'flex';
     modal.style.display = 'flex';
@@ -42,14 +42,28 @@ headerButton.addEventListener('click', (evt) => {
   modal.style.transform = 'translateY(1146px)';
   wrapper.classList.add('wrapper__overlay');
   body.style.overflow = 'hidden';
-  inputName.focus({preventScroll: true});
+  inputName[1].focus({preventScroll: true});
   window.scroll(0, 0);
+
+  if (window.screen.height < 757) {
+    modal.style.height = `${window.screen.height - 147}px`;
+  } else {
+    modal.style.height = 'auto';
+  }
 });
 
 modalClose.addEventListener('click', () => {
   modal.style.transform = 'none';
   wrapper.classList.remove('wrapper__overlay');
   body.style.overflow = 'auto';
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    modal.style.transform = 'none';
+    wrapper.classList.remove('wrapper__overlay');
+    body.style.overflow = 'auto';
+  }
 });
 
 window.addEventListener('click', (evt) => {
@@ -61,13 +75,24 @@ window.addEventListener('click', (evt) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.screen.width < 1024) {
+  if (window.screen.width < 767) {
+    footerTitle2.setAttribute('tabindex', '0');
+    footerTitle3.setAttribute('tabindex', '0');
+  } else if (window.screen.width < 1024) {
     modal.style.transform = 'none';
     modal.style.display = 'none';
     wrapper.classList.remove('wrapper__overlay');
     body.style.overflow = 'auto';
+    footerTitle2.setAttribute('tabindex', '-1');
+    footerTitle3.setAttribute('tabindex', '-1');
   } else {
     modal.style.display = 'flex';
+  }
+
+  if (window.screen.height < 757) {
+    modal.style.height = `${window.screen.height - 147}px`;
+  } else {
+    modal.style.height = 'auto';
   }
 });
 
@@ -126,7 +151,7 @@ const closeDescription = (el) => {
 };
 
 footerTitle2.addEventListener('click', () => {
-  if (window.screen.width < 770) {
+  if (window.screen.width < 768) {
     if (footerTitle2.classList.contains('title-closed')) {
       openDescription(footerTitle2);
       closeDescription(footerTitle3);
@@ -138,7 +163,7 @@ footerTitle2.addEventListener('click', () => {
 });
 
 footerTitle2.addEventListener('keypress', (evt) => {
-  if (evt.keyCode === 13 && window.screen.width < 770) {
+  if (evt.keyCode === 13 && window.screen.width < 768) {
     if (footerTitle2.classList.contains('title-closed')) {
       openDescription(footerTitle2);
       closeDescription(footerTitle3);
@@ -150,7 +175,7 @@ footerTitle2.addEventListener('keypress', (evt) => {
 });
 
 footerTitle3.addEventListener('click', () => {
-  if (window.screen.width < 770) {
+  if (window.screen.width < 768) {
     if (footerTitle3.classList.contains('title-closed')) {
       openDescription(footerTitle3);
       closeDescription(footerTitle2);
@@ -162,7 +187,7 @@ footerTitle3.addEventListener('click', () => {
 });
 
 footerTitle3.addEventListener('keypress', (evt) => {
-  if (evt.keyCode === 13 && window.screen.width < 770) {
+  if (evt.keyCode === 13 && window.screen.width < 768) {
     if (footerTitle3.classList.contains('title-closed')) {
       openDescription(footerTitle3);
       closeDescription(footerTitle2);
@@ -174,7 +199,7 @@ footerTitle3.addEventListener('keypress', (evt) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.screen.width > 769) {
+  if (window.screen.width > 767) {
     footerTitle2.style.borderBottom = 'none';
     footerTitle3.style.borderBottom = 'none';
     footerTitle2.nextElementSibling.style.display = 'flex';
