@@ -145,10 +145,10 @@
               <form class="questions__form form" method="post" action="https://echo.htmlacademy.ru">
                 <div>
                   <label class="form__name">
-                    <input class="form__name" type="text" name="name" placeholder="Имя" minlength="1" pattern="[a-zA-ZА-Яа-яЁё-_]" required>
+                    <input class="form__name" type="text" name="name" placeholder="Имя" minlength="1" required>
                   </label>
                   <label class="form__phone">
-                    <input class="form__phone" type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="10" required>
+                    <input class="form__phone" type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="10" pattern="^[0-9]{10}$" required>
                   </label>
                 </div>
                 <label class="form__question">
@@ -256,7 +256,7 @@
               <input class="form__name" tabindex="2" type="text" name="name" placeholder="Имя" minlength="1" autofocus required>
             </label>
             <label class="form__phone">
-              <input class="form__phone" tabindex="3" type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="10" required>
+              <input class="form__phone" tabindex="3" type="tel" name="phone" placeholder="Телефон" pattern="^[0-9]{10}$" minlength="10" maxlength="10" required>
             </label>
           </div>
           <label class="form__question">
@@ -273,5 +273,7 @@
         </form>
       </div>
     </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

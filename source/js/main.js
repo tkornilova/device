@@ -1,3 +1,5 @@
+import {maskPhone} from '../js/vendor/mask.js';
+
 const wrapper = document.querySelector('.wrapper');
 const body = document.querySelector('body');
 
@@ -23,6 +25,10 @@ if (wrapper.classList.contains('wrapper-no-js')) {
   footerTitle2.classList.add('title-closed');
   footerTitle3.classList.add('title-closed');
   modal.style.top = '-1000px';
+  inputPhone.forEach((value) => {
+    value.setAttribute('minlength', '18');
+    value.setAttribute('maxlength', '18');
+  });
 
   if (window.screen.width > 767) {
     footerTitle2.nextElementSibling.style.display = 'flex';
@@ -211,3 +217,7 @@ window.addEventListener('resize', () => {
     closeDescription(footerTitle3);
   }
 });
+
+// Mask
+
+maskPhone('.form__phone input');

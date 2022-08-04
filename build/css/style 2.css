@@ -696,7 +696,6 @@ a {
   user-select: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  text-align: center;
 }
 
 .description__button:hover,
@@ -1053,7 +1052,7 @@ a {
   background-image: url("../img/questions-bg-1x.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+  background-position: 0 -863px;
 }
 
 .questions__wrapper {
@@ -2211,7 +2210,6 @@ a {
   }
 
   .goods__wrapper h2 {
-    width: 97%;
     font-size: 28px;
     line-height: 140.62%;
     margin: 0 0 28px 0;

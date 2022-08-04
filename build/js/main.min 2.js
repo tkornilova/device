@@ -90,12 +90,8 @@
 /*!********************!*\
   !*** ./js/main.js ***!
   \********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_vendor_mask_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../js/vendor/mask.js */ "./js/vendor/mask.js");
+/*! no static exports found */
+/***/ (function(module, exports) {
 
 var wrapper = document.querySelector('.wrapper');
 var body = document.querySelector('body');
@@ -117,10 +113,6 @@ if (wrapper.classList.contains('wrapper-no-js')) {
   footerTitle2.classList.add('title-closed');
   footerTitle3.classList.add('title-closed');
   modal.style.top = '-1000px';
-  inputPhone.forEach(function (value) {
-    value.setAttribute('minlength', '18');
-    value.setAttribute('maxlength', '18');
-  });
 
   if (window.screen.width > 767) {
     footerTitle2.nextElementSibling.style.display = 'flex';
@@ -294,78 +286,7 @@ window.addEventListener('resize', function () {
     closeDescription(footerTitle2);
     closeDescription(footerTitle3);
   }
-}); // Mask
-
-Object(_js_vendor_mask_js__WEBPACK_IMPORTED_MODULE_0__["maskPhone"])('.form__phone input');
-
-/***/ }),
-
-/***/ "./js/vendor/mask.js":
-/*!***************************!*\
-  !*** ./js/vendor/mask.js ***!
-  \***************************/
-/*! exports provided: maskPhone */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "maskPhone", function() { return maskPhone; });
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-// Taken from https://github.com/KatrinaNov/maskPhone
-function maskPhone(selector) {
-  var masked = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '+7 (___) ___-__-__';
-  var elems = document.querySelectorAll(selector);
-
-  function mask(event) {
-    var keyCode = event.keyCode;
-    var template = masked,
-        def = template.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, "");
-    var i = 0,
-        newValue = template.replace(/[_\d]/g, function (a) {
-      return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-    });
-    i = newValue.indexOf("_");
-
-    if (i !== -1) {
-      newValue = newValue.slice(0, i);
-    }
-
-    var reg = template.substr(0, this.value.length).replace(/_+/g, function (a) {
-      return "\\d{1," + a.length + "}";
-    }).replace(/[+()]/g, "\\$&");
-    reg = new RegExp("^" + reg + "$");
-
-    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-      this.value = newValue;
-    }
-
-    if (event.type === "blur" && this.value.length < 5) {
-      this.value = "";
-    }
-  }
-
-  var _iterator = _createForOfIteratorHelper(elems),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var elem = _step.value;
-      elem.addEventListener("input", mask);
-      elem.addEventListener("focus", mask);
-      elem.addEventListener("blur", mask);
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-}
+});
 
 /***/ })
 
