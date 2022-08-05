@@ -28,6 +28,7 @@ if (wrapper.classList.contains('wrapper-no-js')) {
   inputPhone.forEach((value) => {
     value.setAttribute('minlength', '18');
     value.setAttribute('maxlength', '18');
+    value.removeAttribute('pattern');
   });
 
   if (window.screen.width > 767) {
