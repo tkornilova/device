@@ -139,6 +139,7 @@
   padding: 10px 16px;
   box-sizing: border-box;
   margin: 0;
+  resize: none;
 }
 
 .questions .form__name {
@@ -178,6 +179,7 @@
   padding: 20px 10px;
   box-sizing: border-box;
   margin: 0;
+  resize: none;
 
   @media (max-width: $tablet-width-only) {
     padding: 30px 15px 16px;

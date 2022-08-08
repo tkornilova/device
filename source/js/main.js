@@ -9,7 +9,8 @@ const modalClose = document.querySelector('.modal__close');
 const form = document.querySelector('.form');
 const inputName = document.querySelectorAll('.form__name input');
 const inputPhone = document.querySelectorAll('.form__phone input');
-const buttonSubmit = document.querySelector('.form__button');
+const butonQuestionsSubmit = document.querySelector('.questions .form__button');
+const butonModalSubmit = document.querySelector('.questions .form__button');
 
 const buttonMore = document.querySelector('.aboutus__button');
 const hiddenInfos = document.querySelectorAll('.container__info--hidden');
@@ -28,7 +29,7 @@ if (wrapper.classList.contains('wrapper-no-js')) {
   inputPhone.forEach((value) => {
     value.setAttribute('minlength', '18');
     value.setAttribute('maxlength', '18');
-    value.removeAttribute('pattern');
+    value.setAttribute('pattern', '.{18,}');
   });
 
   if (window.screen.width > 767) {
@@ -53,7 +54,7 @@ headerButton.addEventListener('click', (evt) => {
   window.scroll(0, 0);
 
   if (window.screen.height < 757) {
-    modal.style.height = `${window.screen.height - 147}px`;
+    modal.style.height = `${757 - window.screen.height}px`;
   } else {
     modal.style.height = 'auto';
   }
@@ -105,10 +106,19 @@ window.addEventListener('resize', () => {
 
 // Submit form
 
-buttonSubmit.addEventListener('submit', () => {
-  if (inputName.value !== '' && inputPhone.value !== '') {
-    localStorage.setItem('name', inputName.value);
-    localStorage.setItem('phone', inputPhone.value);
+butonQuestionsSubmit.addEventListener('submit', () => {
+  if (inputName[0].value !== '' && inputPhone[0].value !== '' & inputPhone[0].value.length === 18) {
+    localStorage.setItem('name', inputName[0].value);
+    localStorage.setItem('phone', inputPhone[0].value);
+  } else {
+    form.reportValidity();
+  }
+});
+
+butonModalSubmit.addEventListener('submit', () => {
+  if (inputName[1].value !== '' && inputPhone[1].value !== '' & inputPhone[1].value.length === 18) {
+    localStorage.setItem('name', inputName[1].value);
+    localStorage.setItem('phone', inputPhone[1].value);
   } else {
     form.reportValidity();
   }

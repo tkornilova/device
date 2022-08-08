@@ -15,6 +15,9 @@
   right: 0;
   transition: 1s;
   z-index: 100;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 
   @media (max-width: $tablet-width-only) {
     display: none;
@@ -71,6 +74,7 @@
   width: 97%;
   height: 45px;
   margin: 0 0 24px 0;
+  resize: none;
 }
 
 .modal input:hover,
@@ -82,6 +86,7 @@
 .modal textarea {
   width: 97%;
   margin: 0 0 16px 0;
+  resize: none;
 }
 
 .modal .form__button {
