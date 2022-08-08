@@ -53,8 +53,8 @@ headerButton.addEventListener('click', (evt) => {
   inputName[1].focus({preventScroll: true});
   window.scroll(0, 0);
 
-  if (window.screen.height < 757) {
-    modal.style.height = `${757 - window.screen.height}px`;
+  if (window.innerHeight < 757) {
+    modal.style.height = `${window.innerHeight - 147}px`;
   } else {
     modal.style.height = 'auto';
   }
@@ -97,8 +97,8 @@ window.addEventListener('resize', () => {
     modal.style.display = 'flex';
   }
 
-  if (window.screen.height < 757) {
-    modal.style.height = `${window.screen.height - 147}px`;
+  if (window.innerHeight < 757) {
+    modal.style.height = `${window.innerHeight - 147}px`;
   } else {
     modal.style.height = 'auto';
   }
